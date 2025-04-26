@@ -19,7 +19,7 @@ pgClient.connect().catch((err) => {
 
 // Create server instance
 export const server = new McpServer({
-  name: "weather",
+  name: "sql-mcp-server",
   version: "1.0.0",
   capabilities: {
     resources: {},
@@ -27,7 +27,7 @@ export const server = new McpServer({
   },
 });
 
-// Register weather tools
+// Register execute sql tools
 server.tool(
   "execute-sql",
   "SQLを実行します。",
