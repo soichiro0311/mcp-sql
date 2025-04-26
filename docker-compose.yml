@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:14
+    container_name: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - db-store:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_DB: 'postgres' # 追加（任意）
+volumes:
+  db-store:
